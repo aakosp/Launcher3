@@ -19,7 +19,7 @@
 -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.launcher3">
+    package="com.aako.launcher3">
     
     <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="19"/>
     
@@ -71,14 +71,14 @@
     <uses-permission android:name="com.android.launcher3.permission.RECEIVE_LAUNCH_BROADCASTS" />
 
     <application
-        android:name="com.android.launcher3.LauncherApplication"
+        android:name=".LauncherApplication"
         android:label="@string/application_name"
         android:icon="@mipmap/ic_launcher_home"
         android:hardwareAccelerated="true"
         android:largeHeap="@bool/config_largeHeap"
         android:supportsRtl="true">
         <activity
-            android:name="com.android.launcher3.Launcher"
+            android:name=".Launcher"
             android:launchMode="singleTask"
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
@@ -95,7 +95,7 @@
         </activity>
 
         <activity
-            android:name="com.android.launcher3.ToggleWeightWatcher"
+            android:name=".ToggleWeightWatcher"
             android:label="@string/toggle_weight_watcher"
             android:enabled="@bool/debug_memory_enabled"
             android:icon="@mipmap/ic_launcher_home">
@@ -107,7 +107,7 @@
         </activity>
 
         <activity
-            android:name="com.android.launcher3.WallpaperPickerActivity"
+            android:name=".WallpaperPickerActivity"
             android:theme="@style/Theme.WallpaperCropper"
             android:label="@string/pick_wallpaper"
             android:icon="@mipmap/ic_launcher_wallpaper"
@@ -120,7 +120,7 @@
         </activity>
 
         <activity
-            android:name="com.android.launcher3.WallpaperCropActivity"
+            android:name=".WallpaperCropActivity"
             android:theme="@style/Theme.WallpaperCropper"
             android:label="@string/crop_wallpaper"
             android:icon="@mipmap/ic_launcher_wallpaper"
@@ -135,7 +135,7 @@
 
         <!-- Debugging tools -->
         <activity
-            android:name="com.android.launcher3.MemoryDumpActivity"
+            android:name=".MemoryDumpActivity"
             android:theme="@android:style/Theme.NoDisplay"
             android:label="@string/debug_memory_activity"
             android:enabled="@bool/debug_memory_enabled"
@@ -149,14 +149,14 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.android.launcher3.MemoryTracker"
+        <service android:name=".MemoryTracker"
             android:enabled="@bool/debug_memory_enabled"
             >
         </service>
 
         <!-- Intent received used to prepopulate the default workspace. -->
         <receiver
-            android:name="com.android.launcher3.PreloadReceiver"
+            android:name=".PreloadReceiver"
             android:permission="com.android.launcher3.permission.PRELOAD_WORKSPACE">
             <intent-filter>
                 <action android:name="com.android.launcher3.action.PRELOAD_WORKSPACE" />
@@ -165,7 +165,7 @@
 
         <!-- Intent received used to install shortcuts from other applications -->
         <receiver
-            android:name="com.android.launcher3.InstallShortcutReceiver"
+            android:name=".InstallShortcutReceiver"
             android:permission="com.android.launcher3.permission.INSTALL_SHORTCUT">
             <intent-filter>
                 <action android:name="com.android.launcher3.action.INSTALL_SHORTCUT" />
@@ -174,7 +174,7 @@
 
         <!-- Intent received used to uninstall shortcuts from other applications -->
         <receiver
-            android:name="com.android.launcher3.UninstallShortcutReceiver"
+            android:name=".UninstallShortcutReceiver"
             android:permission="com.android.launcher3.permission.UNINSTALL_SHORTCUT">
             <intent-filter>
                 <action android:name="com.android.launcher3.action.UNINSTALL_SHORTCUT" />
@@ -183,14 +183,14 @@
 
         <!-- New user initialization; set up initial wallpaper -->
         <receiver
-            android:name="com.android.launcher3.UserInitializeReceiver"
+            android:name=".UserInitializeReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.USER_INITIALIZE" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.android.launcher3.PackageChangedReceiver" >
+        <receiver android:name=".PackageChangedReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_CHANGED"/>
                 <action android:name="android.intent.action.PACKAGE_REPLACED"/>
@@ -201,8 +201,8 @@
 
         <!-- The settings provider contains Home's data, like the workspace favorites -->
         <provider
-            android:name="com.android.launcher3.LauncherProvider"
-            android:authorities="com.android.launcher3.settings"
+            android:name=".LauncherProvider"
+            android:authorities="com.aako.launcher3.settings"
             android:exported="true"
             android:writePermission="com.android.launcher3.permission.WRITE_SETTINGS"
             android:readPermission="com.android.launcher3.permission.READ_SETTINGS" />
