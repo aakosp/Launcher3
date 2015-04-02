@@ -70,6 +70,7 @@
     <uses-permission android:name="com.android.launcher3.permission.WRITE_SETTINGS" />
     <uses-permission android:name="com.android.launcher3.permission.RECEIVE_LAUNCH_BROADCASTS" />
 
+
     <application
         android:name=".LauncherApplication"
         android:label="@string/application_name"

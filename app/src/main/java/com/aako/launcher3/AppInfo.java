@@ -130,7 +130,7 @@ class AppInfo extends ItemInfo {
 
     @Override
     public String toString() {
-        return "ApplicationInfo(title=" + title.toString() + " id=" + this.id
+        return "ApplicationInfo(title=" + title.toString() + " id=" + this.id +" componentName="+ this.componentName
                 + " type=" + this.itemType + " container=" + this.container
                 + " screen=" + screenId + " cellX=" + cellX + " cellY=" + cellY
                 + " spanX=" + spanX + " spanY=" + spanY + " dropPos=" + dropPos + ")";

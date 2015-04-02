@@ -65,7 +65,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * for the Launcher.
  */
 public class LauncherModel extends BroadcastReceiver {
-    static final boolean DEBUG_LOADERS = false;
+    static final boolean DEBUG_LOADERS = true;
     static final String TAG = "Launcher.Model";
 
     // true = use a "More Apps" folder for non-workspace apps on upgrade

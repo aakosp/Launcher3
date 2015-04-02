@@ -196,7 +196,8 @@ public class AppsCustomizePagedView extends PagedViewWithDraggableItems implemen
     private AccelerateInterpolator mAlphaInterpolator = new AccelerateInterpolator(0.9f);
     private DecelerateInterpolator mLeftScreenAlphaInterpolator = new DecelerateInterpolator(4);
 
-    public static boolean DISABLE_ALL_APPS = false;
+    //true显示所有APPS/false隐藏
+    public static boolean DISABLE_ALL_APPS = true;
 
     // Previews & outlines
     ArrayList<AppsCustomizeAsyncTask> mRunningTasks;

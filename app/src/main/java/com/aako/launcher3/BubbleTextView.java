@@ -25,6 +25,7 @@ import android.graphics.Region;
 import android.graphics.Region.Op;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.widget.TextView;
@@ -224,6 +225,8 @@ public class BubbleTextView extends TextView {
         // Call the superclass onTouchEvent first, because sometimes it changes the state to
         // isPressed() on an ACTION_UP
         boolean result = super.onTouchEvent(event);
+
+//        Log.d("BubbleTextView", "onTouchEvent");
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
